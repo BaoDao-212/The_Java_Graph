@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DefineGraph">
+   <children>
+      <Label layoutX="150.0" layoutY="84.0" text="The Java Graph">
+         <font>
+            <Font name="Consolas" size="39.0" />
+         </font>
+      </Label>
+      <VBox layoutX="83.0" layoutY="200.0" prefHeight="57.0" prefWidth="135.0" AnchorPane.bottomAnchor="143.0">
+         <children>
+            <RadioButton fx:id="dButton" mnemonicParsing="false" text="Directed">
+               <toggleGroup>
+                  <ToggleGroup fx:id="direction" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="udButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Undirected" toggleGroup="$direction" />
+         </children>
+      </VBox>
+      <VBox layoutX="384.0" layoutY="200.0" prefHeight="57.0" prefWidth="135.0">
+         <children>
+            <RadioButton fx:id="wButton" mnemonicParsing="false" text="Weighted">
+               <toggleGroup>
+                  <ToggleGroup fx:id="weight" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="uwButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Unweighted" toggleGroup="$weight" />
+         </children>
+      </VBox>
+      <Button fx:id="nextButton" layoutX="468.0" layoutY="320.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="51.0">
+         <graphic>
+            <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../bin/image/right-arrow.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
